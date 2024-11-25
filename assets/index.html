@@ -6,29 +6,863 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/index.css">
+
     <title>FUT Champions Web App Ultimate Team</title>
-    <style>
-        
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
 
-    <div class="container">
-        <div class="line"></div>
- 
-        <div class="panelty left"></div>
-        
-        <div class="panelty right">
-          
-            
-        </div>
-        <div class="p-spot left">&nbsp;</div>
-        <div class="p-spot right">&nbsp;</div>
-        <div class="center"></div>
-        <div class="p-place left"></div>
-        <div class="p-place right"></div>
-        
-    </div>
+    
 
+<nav class="bg-white border-gray-200 dark:bg-gray-900">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="..//assets/image/fut-logo.png" class="h-8 w-10" alt=""  />
+          <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
+      </a>
+      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<div class="fulll" >
+
+
+
+ <div class="vvv">
+       
+
+<div class="attaquant1">
+    
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   <div class="item1">
+    <div class="attaquant">
+
+        <div class="fut-player-card">
+            <div class="player-card-top">
+                <div class="player-master-info">
+                    <div class="player-rating">
+                        <span>97</span>
+                    </div>
+                    <div class="player-position">
+                        <span>RW</span>
+                    </div>
+                    <div class="player-nation">
+                        <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                    </div>
+                    <div class="player-club">
+                        <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                    </div>
+                </div>
+                <div class="player-picture">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                    <div class="player-extra">
+                        <span>4*SM</span>
+                        <span>4*WF</span>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card-bottom">
+                <div class="player-info">
+                    <div class="player-name">
+                        <span>MESSI</span>
+                    </div>
+                    <div class="player-features">
+                        <div class="player-features-col">
+                            <span>
+                                <div class="player-feature-value">97</div>
+                                <div class="player-feature-title">PAC</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">95</div>
+                                <div class="player-feature-title">SHO</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">94</div>
+                                <div class="player-feature-title">PAS</div>
+                            </span>
+                        </div>
+                        <div class="player-features-col">
+                            <span>
+                                <div class="player-feature-value">99</div>
+                                <div class="player-feature-title">DRI</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">35</div>
+                                <div class="player-feature-title">DEF</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">68</div>
+                                <div class="player-feature-title">PHY</div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="attaquant">
+
+        <div class="fut-player-card">
+            <div class="player-card-top">
+                <div class="player-master-info">
+                    <div class="player-rating">
+                        <span>97</span>
+                    </div>
+                    <div class="player-position">
+                        <span>RW</span>
+                    </div>
+                    <div class="player-nation">
+                        <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                    </div>
+                    <div class="player-club">
+                        <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                    </div>
+                </div>
+                <div class="player-picture">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                    <div class="player-extra">
+                        <span>4*SM</span>
+                        <span>4*WF</span>
+                    </div>
+                </div>
+            </div>
+            <div class="player-card-bottom">
+                <div class="player-info">
+                    <div class="player-name">
+                        <span>MESSI</span>
+                    </div>
+                    <div class="player-features">
+                        <div class="player-features-col">
+                            <span>
+                                <div class="player-feature-value">97</div>
+                                <div class="player-feature-title">PAC</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">95</div>
+                                <div class="player-feature-title">SHO</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">94</div>
+                                <div class="player-feature-title">PAS</div>
+                            </span>
+                        </div>
+                        <div class="player-features-col">
+                            <span>
+                                <div class="player-feature-value">99</div>
+                                <div class="player-feature-title">DRI</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">35</div>
+                                <div class="player-feature-title">DEF</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">68</div>
+                                <div class="player-feature-title">PHY</div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+   </div>
+
+<div class="item2" style="display: flex;">
+     
+ <div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+    
+   <div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+   </div>
+    
+   <div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+    
+<div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+
+
+<div class="item3" style="display: flex;">
+     
+<div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+      
+<div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+
+      
+<div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+
+<div class="item4">
+       
+<div class="centre">
+    <div class="fut-player-card">
+        <div class="player-card-top">
+            <div class="player-master-info">
+                <div class="player-rating">
+                    <span>97</span>
+                </div>
+                <div class="player-position">
+                    <span>RW</span>
+                </div>
+                <div class="player-nation">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/argentina.svg" alt="Argentina" draggable="false"/>
+                </div>
+                <div class="player-club">
+                    <img src="https://selimdoyranli.com/cdn/fut-player-card/img/barcelona.svg" alt="Barcelona" draggable="false"/>
+                </div>
+            </div>
+            <div class="player-picture">
+                <img src="https://selimdoyranli.com/cdn/fut-player-card/img/messi.png" alt="Messi" draggable="false"/>
+                <div class="player-extra">
+                    <span>4*SM</span>
+                    <span>4*WF</span>
+                </div>
+            </div>
+        </div>
+        <div class="player-card-bottom">
+            <div class="player-info">
+                <div class="player-name">
+                    <span>MESSI</span>
+                </div>
+                <div class="player-features">
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">97</div>
+                            <div class="player-feature-title">PAC</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">95</div>
+                            <div class="player-feature-title">SHO</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">94</div>
+                            <div class="player-feature-title">PAS</div>
+                        </span>
+                    </div>
+                    <div class="player-features-col">
+                        <span>
+                            <div class="player-feature-value">99</div>
+                            <div class="player-feature-title">DRI</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">35</div>
+                            <div class="player-feature-title">DEF</div>
+                        </span>
+                        <span>
+                            <div class="player-feature-value">68</div>
+                            <div class="player-feature-title">PHY</div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+   </div>
+
+</div>
+
+<div class="select">
+
+                
+  <div class="nn">
+    <form class="max-w-sm mx-auto">
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Squad info</label>
+        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>select Squad </option>
+          <option value="US">3-4-3</option>
+          <option value="CA">4-4-2</option>
+          <option value="FR">3-4-3</option>
+          <option value="DE">3-5-2</option>
+        </select>
+      </form>
+  </div>
+
+
+  <div class="nn">
+    <form class="max-w-sm mx-auto">
+        <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select an option</label>
+        <select id="countries" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+          <option selected>Choose a country</option>
+          <option value="US">United States</option>
+          <option value="CA">Canada</option>
+          <option value="FR">France</option>
+          <option value="DE">Germany</option>
+        </select>
+      </form>
+  </div>
+
+  
+ <h3>Create Squad</h3>
+<form class="max-w-md mx-auto">
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="email" name="floating_email" id="floating_email" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_email" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Email address</label>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="password" name="floating_password" id="floating_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Password</label>
+    </div>
+    <div class="relative z-0 w-full mb-5 group">
+        <input type="password" name="repeat_password" id="floating_repeat_password" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+        <label for="floating_repeat_password" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Confirm password</label>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="floating_first_name" id="floating_first_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_first_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">First name</label>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="floating_last_name" id="floating_last_name" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_last_name" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Last name</label>
+      </div>
+    </div>
+    <div class="grid md:grid-cols-2 md:gap-6">
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="floating_phone" id="floating_phone" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_phone" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Phone number (123-456-7890)</label>
+      </div>
+      <div class="relative z-0 w-full mb-5 group">
+          <input type="text" name="floating_company" id="floating_company" class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " required />
+          <label for="floating_company" class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Company (Ex. Google)</label>
+      </div>
+    </div>
+    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
+  </form>
+  
+  
+    </div>
+</div>
 </body>
 </html>
