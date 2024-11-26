@@ -65,6 +65,10 @@ body {
     padding: 0 1rem;
 }
 
+label{
+    color: aliceblue;
+}
+
 .fut-player-card .player-card-top .player-master-info {
     position: absolute;
     line-height: 1.8rem;
