@@ -44,8 +44,8 @@ body {
 
 .fut-player-card {
     position: relative;
-    width: 170px;
-    height: 255px;
+    width: 140px;
+    height: 200px;
     background-image: url(https://selimdoyranli.com/cdn/fut-player-card/img/card_bg.png);
     background-position: center center;
     background-size: 100% 100%;
@@ -71,30 +71,31 @@ label{
 
 .fut-player-card .player-card-top .player-master-info {
     position: absolute;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     font-weight: 300;
+    margin-left: -12px;
     padding: 0.8rem 0;
     text-transform: uppercase;
 }
 
 .fut-player-card .player-card-top .player-master-info .player-rating {
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 .fut-player-card .player-card-top .player-master-info .player-position {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
 }
 
 .fut-player-card .player-card-top .player-master-info .player-nation,
 .fut-player-card .player-card-top .player-master-info .player-club {
-    width: 1.3rem;
+    width: 1rem;
     height: 20px;
-    margin: 0.2rem 0;
+    margin: rem 0;
 }
 
 .fut-player-card .player-card-top .player-picture {
-    width: 100px;
-    height: 130px;
+    width: 90px;
+    height: 80px;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -111,7 +112,6 @@ label{
 .fut-player-card .player-card-top .player-picture .player-extra {
     position: absolute;
     right: 0;
-    bottom: -0.3rem;
     overflow: hidden;
     font-size: 0.8rem;
     font-weight: 700;
@@ -146,14 +146,16 @@ label{
     text-transform: uppercase;
     border-bottom: 2px solid rgba(233, 204, 116, 0.1);
     padding-bottom: 0.1rem;
+    margin-top: 8px;
     overflow: hidden;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features {
     margin: 0.3rem auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    /* margin-top: 60px; */
+    margin-top: -3px;
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
