@@ -30,7 +30,7 @@ let position = document.getElementById('position');
 //player variables
 
 const pName = document.querySelector(".player-name");
-const prating= document.querySelector('.player-rating');
+const prating= document.querySelector('.p-rating');
 const pposition=document.querySelector('.player-position');
 const pnation = document.querySelector('.player-nation');
 const pclub = document.querySelector('.player-club');
@@ -49,13 +49,21 @@ addPlayerForm.addEventListener("submit",function(event){
 
   function addPlayer(){
     pName.innerHTML = name.value;
-    prating.innerHTML=rating.value;
+    prating.innerHTML= rating.value;
     pposition.innerHTML= pos.value;
     pnation.innerHTML= nationality.value;
+    pclub.innerHTML=club.value;
+    pac.innerHTML=pace.value;
+    sho.innerHTML=shooting.value;
+    pas.innerHTML=passing.value;
+    dri.innerHTML=dribbling.value;
+    def.innerHTML= defending.value;
+    phy.innerHTML=physical.value;
+    console.log("rating",rating.value)
     
-
-    console.log("name",name.value)
   }
+  
+ 
 //create data
 
 
