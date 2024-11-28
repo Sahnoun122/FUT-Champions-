@@ -149,7 +149,11 @@ label{
     margin-top: 8px;
     overflow: hidden;
 }
-
+.card{
+    margin-inline: 200px;
+    width: 900px;
+    margin-top: 50px;
+}
 .fut-player-card .player-card-bottom .player-info .player-features {
     margin: 0.3rem auto;
     display: grid;
