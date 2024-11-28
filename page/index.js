@@ -1,5 +1,16 @@
-let addPlayerForm = document.getElementById("add-form");
+const btn1 = document.querySelector("#crud-modal");
+let isclick = true;
+let btn = function() {
+    if (isclick == 1) {
+        btn1.style.display = "block";
+        isclick = 0;
+    } else {
+        btn1.style.display = "none";
+        isclick = 1;
+    }
+}
 
+let addPlayerForm = document.getElementById("add-form");
 let name = document.getElementById('name');
 let pos = document.getElementById('pos');
 let rating = document.getElementById('rating');
@@ -133,7 +144,7 @@ function displayPlayers() {
                         </div>
                     </div>
                 </div>
-                <button >Edit</button>
+                <button onclick="deletePlayer(${index})" style="color: white;">Edit</button>
                 <button onclick="deletePlayer(${index})"  style="color: white;">Delete</button>
             </div>
         `;
@@ -144,7 +155,8 @@ function displayPlayers() {
 displayPlayers()
 document.addEventListener('DOMContentLoaded', fetchPlayers);
 
-
 function deletePlayer(index) { players.splice(index, 1); 
     localStorage.setItem('player', JSON.stringify(players)); 
     displayPlayers();}
+
+
