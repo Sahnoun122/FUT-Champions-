@@ -125,6 +125,7 @@ function displayPlayers() {
                                 <div class="player-feature-value">${player.defending}</div>
                                 <div class="player-feature-title">DEF</div>
                             </span>
+
                             <span>
                                 <div class="player-feature-value">${player.physical}</div>
                                 <div class="player-feature-title">PHY</div>
@@ -148,3 +149,4 @@ document.addEventListener('DOMContentLoaded', fetchPlayers);
 function deletePlayer(index) { players.splice(index, 1); 
     localStorage.setItem('player', JSON.stringify(players)); 
     displayPlayers();}
+    
