@@ -86,6 +86,7 @@ async function fetchPlayers() {
         const response = await fetch('./players.json');
         const data = await response.json();
         localStorage.setItem('players', JSON.stringify(data));
+        console.log(data)
         displayPlayers();
     } catch (error) {
         console.error('Failed to fetch players', error);
@@ -127,7 +128,7 @@ function getPlayerContainer(position) {
 }
 
 function displayPlayers() {
-    let playersList = document.getElementById('players-list');
+    const playersList = document.getElementById('players-list');
     playersList.innerHTML = '';
 
     players.forEach((player, index) => {
@@ -184,14 +185,59 @@ function displayPlayers() {
             </div>
         `;
 
-        const playerContainer = getPlayerContainer(player.position);
-        if (playerContainer) {
-            playerContainer.appendChild(playerCard);
-        } else {
-            playersList.appendChild(playerCard);
+        switch (player.position) {
+            case 'LW':
+                lw.innerHTML = playerCard.innerHTML;
+                break;
+            case 'ST':
+                st.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'RW':
+                rw.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'CM-G':
+                cm_g.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'CM':
+                cm_c.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'CM-D':
+                cm_d.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'LB':
+                lb.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'CB-G':
+                cb_g.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'CB':
+                cb_d.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'RB':
+                rb.innerHTML = playerCard.innerHTML;
+
+                break;
+            case 'GK':
+                gk.innerHTML = playerCard.innerHTML;
+                break;
+            default:
+                playersList.appendChild(playerCard);
+                break;
         }
     });
 }
+
+displayPlayers();
+document.addEventListener('DOMContentLoaded', fetchPlayers);
+
 
 function editPlayer(index) {
     const player = players[index];
@@ -249,5 +295,4 @@ function deletePlayer(index) {
     displayPlayers();
 }
 
-// Load and display players from localStorage on page load
 document.addEventListener('DOMContentLoaded', fetchPlayers);
