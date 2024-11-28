@@ -133,7 +133,6 @@ function displayPlayers() {
     players.forEach((player, index) => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('fut-player-card');
-
         playerCard.innerHTML = `
             <div class="player-card-top">
                 <div class="player-master-info">
