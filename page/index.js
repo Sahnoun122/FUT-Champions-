@@ -145,8 +145,6 @@ displayPlayers()
 document.addEventListener('DOMContentLoaded', fetchPlayers);
 
 
-
 function deletePlayer(index) { players.splice(index, 1); 
     localStorage.setItem('player', JSON.stringify(players)); 
     displayPlayers();}
-    
