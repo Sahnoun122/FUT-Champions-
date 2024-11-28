@@ -15,7 +15,7 @@ let physical = document.getElementById('physical');
 
 
 let players = JSON.parse(localStorage.getItem('player')) || [];
-let player = JSON.parse(localStorage.getItem('player')) || [];
+// let player = JSON.parse(localStorage.getItem('player')) || [];
 
 console.log(players);
 
@@ -58,7 +58,7 @@ function addPlayer() {
 
     // let players = JSON.parse(localStorage.getItem('players')) || [];
     players.push(player);
-    // localStorage.setItem('player', JSON.stringify(players));
+    localStorage.setItem('players', JSON.stringify(players));
 
     clearData();
     displayPlayers();
@@ -133,13 +133,18 @@ function displayPlayers() {
                     </div>
                 </div>
                 <button >Edit</button>
-                <button>Delete</button>
+                <button onclick="deletePlayer(${index})"  style="color: white;">Delete</button>
             </div>
         `;
         playersList.appendChild(playerCard);
     });
-
+    
 }
 displayPlayers()
 document.addEventListener('DOMContentLoaded', fetchPlayers);
 
+
+
+function deletePlayer(index) { players.splice(index, 1); 
+    localStorage.setItem('player', JSON.stringify(players)); 
+    displayPlayers();}
