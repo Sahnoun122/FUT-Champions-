@@ -1,86 +1,37 @@
-let attaquant = document.getElementsByClassName('attaquant');
-let item1 = document.getElementsByClassName('item1');
-let item2 = document.getElementsByClassName('item2');
-let centre = document.getElementsByClassName('centre');
-let item3 = document.getElementsByClassName('item3');
-let item4 = document.getElementsByClassName('item4');
-let gk = document.getElementsByClassName('gk');
-let defanse = document.getElementsByClassName('defanse');
-
-const attaquant1= document.getElementById('attaquant');
-const center1=document.getElementById('centre');
-const defanse1=document.getElementById('defanse');
-const gk1=document.getElementById('gk');
-
 let addPlayerForm = document.getElementById("add-form");
 
-// Form inputs
 let name = document.getElementById('name');
-let photo = document.getElementById('photo');
-let nationality = document.getElementById('nationality');
-let position = document.getElementById('pos');
+let pos = document.getElementById('pos');
 let rating = document.getElementById('rating');
+let nationality = document.getElementById('nationality');
 let club = document.getElementById('club');
-let logo = document.getElementById('logo');
+let photo = document.getElementById('photo');
 let pace = document.getElementById('pace');
 let shooting = document.getElementById('shooting');
 let passing = document.getElementById('passing');
 let dribbling = document.getElementById('dribbling');
 let defending = document.getElementById('defending');
 let physical = document.getElementById('physical');
-let submit = document.getElementById('submit');
-let positionn = document.getElementById('position');
 
-// Player details display
-const pName = document.querySelector(".player-name");
-const prating = document.querySelector('.p-rating');
-const pposition = document.querySelector('.player-position');
-const pnation = document.querySelector('.player-nation');
-const pclub = document.querySelector('.player-club');
-const pac = document.querySelector('.pac');
-const sho = document.querySelector('.sho');
-const pas = document.querySelector('.pas');
-const dri = document.querySelector('.dri');
-const def = document.querySelector('.def');
-const phy = document.querySelector('.phy');
 
-// Event listener for form submission
+let players = JSON.parse(localStorage.getItem('player')) || [];
+let player = JSON.parse(localStorage.getItem('player')) || [];
+
+console.log(players);
+
 addPlayerForm.addEventListener("submit", function(event) {
     event.preventDefault();
     addPlayer();
 });
 
-function addPlayer() {
-    const player = {
-        name: name.value,
-        rating: rating.value,
-        position: pos.value,
-        nationality: nationality.value,
-        club: club.value,
-        pace: pace.value,
-        shooting: shooting.value,
-        passing: passing.value,
-        dribbling: dribbling.value,
-        defending: defending.value,
-        physical: physical.value,
-        imageSrc: photo.value 
-    };
 
-    let players = JSON.parse(localStorage.getItem('players')) || [];
-    players.push(player);
-    localStorage.setItem('players', JSON.stringify(players));
-
-    cleardata();
-    displayPlayers();
-}
-
-function cleardata() {
+function clearData() {
     name.value = '';
-    nationality.value = '';
     pos.value = 'Choose a position';
     rating.value = '';
+    nationality.value = '';
     club.value = '';
-    photo.value = ''; 
+    photo.value = '';
     pace.value = '';
     shooting.value = '';
     passing.value = '';
@@ -89,27 +40,50 @@ function cleardata() {
     physical.value = '';
 }
 
+function addPlayer() {
+    const player = {
+        name: name.value,
+        position: pos.value,
+        rating: rating.value,
+        nationality: nationality.value,
+        club: club.value,
+        photo: photo.value,
+        pace: pace.value,
+        shooting: shooting.value,
+        passing: passing.value,
+        dribbling: dribbling.value,
+        defending: defending.value,
+        physical: physical.value
+    };
+
+    // let players = JSON.parse(localStorage.getItem('players')) || [];
+    players.push(player);
+    // localStorage.setItem('player', JSON.stringify(players));
+
+    clearData();
+    displayPlayers();
+}
+
 async function fetchPlayers() {
     try {
-        const response = await fetch('../page/player.json');
+        const response = await fetch('./players.json');
         const data = await response.json();
-        let localPlayers = JSON.parse(localStorage.getItem('players')) || [];
-        localPlayers = localPlayers.concat(data.players);
-        localStorage.setItem('players', JSON.stringify(localPlayers));
+        localStorage.setItem('players', JSON.stringify(data));
         displayPlayers();
-        console.log(data)
-    } 
-    catch (error) {
+    } catch (error) {
         console.error('Failed to fetch players', error);
     }
 }
 
-function displayPlayers() {
-    const players = JSON.parse(localStorage.getItem('players')) || [];
-    const playersList = document.getElementById('players-list');
-    playersList.innerHTML = ''; 
+let localPlayers = JSON.parse(localStorage.getItem('players'));
 
-    players.forEach(player => {
+
+
+function displayPlayers() {
+    const playersList = document.getElementById('players-list');
+    playersList.innerHTML = '';
+
+    players.forEach((player, index) => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('fut-player-card');
         playerCard.innerHTML = `
@@ -120,7 +94,7 @@ function displayPlayers() {
                     <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
                     <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
                 </div>
-                <div class="player-picture"><img src="${player.imageSrc || 'default_image.png'}" alt="${player.name}" draggable="false"/>
+                <div class="player-picture"><img src="${player.photo}" alt="${player.name}" draggable="false"/>
                     <div class="player-extra"><span>${player.position}</span></div>
                 </div>
             </div>
@@ -158,10 +132,14 @@ function displayPlayers() {
                         </div>
                     </div>
                 </div>
+                <button >Edit</button>
+                <button>Delete</button>
             </div>
         `;
         playersList.appendChild(playerCard);
     });
-}
 
+}
+displayPlayers()
 document.addEventListener('DOMContentLoaded', fetchPlayers);
+
