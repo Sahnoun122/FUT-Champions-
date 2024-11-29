@@ -1,11 +1,11 @@
-const btn1 = document.querySelector("#crud-modal");
+const modal = document.querySelector("#crud-modal");
 let isclick = true;
 let btn = function() {
     if (isclick == 1) {
-        btn1.style.display = "block";
+        modal.style.display = "block";
         isclick = 0;
     } else {
-        btn1.style.display = "none";
+        modal.style.display = "none";
         isclick = 1;
     }
 }
@@ -182,8 +182,8 @@ function displayPlayers() {
                         </div>
                     </div>
                 </div>
-                <button id="submit" onclick="editPlayer(${index})" style="color: white;">Edit</button>
-                <button onclick="deletePlayer(this,${index})" style="color: white;">Delete</button>
+                <button  onclick="editPlayer(${index})" style="color: blue;"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button onclick="deletePlayer(this,${index})" style="color: red;"><i class="fa-solid fa-trash"></i></button>
             </div>
         `;
 
@@ -241,8 +241,12 @@ displayPlayers();
 document.addEventListener('DOMContentLoaded', fetchPlayers);
 
 
-function editPlayer(index) {
+function editPlayer(index){
+    modal.classList.remove("hidden")
+    addPlayerForm.style.display='block';
     const player = players[index];
+    
+    console.log("done")
 
     name.value = player.name;
     pos.value = player.position;
@@ -256,40 +260,16 @@ function editPlayer(index) {
     dribbling.value = player.dribbling;
     defending.value = player.defending;
     physical.value = player.physical;
-
-    submit.innerHTML = "Update Player";
-    submit.onclick = function(event) {
-        event.preventDefault();
-        updatePlayer(index);
+    
+    console.log(name.value)
+    
     };
+function save(){
+    addPlayerForm.style.display='none';
+
 }
 
-function updatePlayer(index) {
-    players[index] = {
-        name: name.value,
-        position: pos.value,
-        rating: rating.value,
-        nationality: nationality.value,
-        club: club.value,
-        photo: photo.value,
-        pace: pace.value,
-        shooting: shooting.value,
-        passing: passing.value,
-        dribbling: dribbling.value,
-        defending: defending.value,
-        physical: physical.value
-    };
-
-    localStorage.setItem('player', JSON.stringify(players));
-    displayPlayers();
-    submit.value = 'Add Player';
-    submit.onclick = function(event) {
-        event.preventDefault();
-        addPlayer();
-    };
-
-    clearData();
-}
+displayPlayers() 
 
 function deletePlayer(element,index) { 
 
@@ -300,3 +280,4 @@ function deletePlayer(element,index) {
 }
 
 document.addEventListener('DOMContentLoaded', fetchPlayers);
+
