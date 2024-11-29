@@ -9,6 +9,18 @@ let btn = function() {
         isclick = 1;
     }
 }
+const change = document.querySelector("#default-modal")
+
+let isclick1 = true;
+let btn1 = function() {
+    if (isclick1 == 1) {
+        change.style.display = "block";
+        isclick1 = 0;
+    } else {
+        change.style.display = "none";
+        isclick1 = 1;
+    }
+}
 let submit= document.getElementById('submit');
 let addPlayerForm = document.getElementById("add-form");
 
@@ -184,6 +196,9 @@ function displayPlayers() {
                 </div>
                 <button  onclick="editPlayer(${index})" style="color: blue;"><i class="fa-solid fa-pen-to-square"></i></button>
                 <button onclick="deletePlayer(this,${index})" style="color: red;"><i class="fa-solid fa-trash"></i></button>
+                <button onclick="btn1()" style="color: green;"><i class="fa-solid fa-reply"></i></button>
+
+
             </div>
         `;
 
@@ -243,7 +258,7 @@ document.addEventListener('DOMContentLoaded', fetchPlayers);
 
 function editPlayer(index){
     modal.classList.remove("hidden")
-    addPlayerForm.style.display='block';
+    modal.style.display='block';
     const player = players[index];
     
     console.log("done")
@@ -265,7 +280,7 @@ function editPlayer(index){
     
     };
 function save(){
-    addPlayerForm.style.display='none';
+    modal.style.display='none';
 
 }
 
