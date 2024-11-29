@@ -9,6 +9,7 @@ let btn = function() {
         isclick = 1;
     }
 }
+let submit= document.getElementById('submit');
 let addPlayerForm = document.getElementById("add-form");
 
 let name = document.getElementById('name');
@@ -23,6 +24,7 @@ let passing = document.getElementById('passing');
 let dribbling = document.getElementById('dribbling');
 let defending = document.getElementById('defending');
 let physical = document.getElementById('physical');
+
 let players = JSON.parse(localStorage.getItem('player')) || [];
 let player = JSON.parse(localStorage.getItem('player')) || [];
 
@@ -95,8 +97,8 @@ async function fetchPlayers() {
 
 //players array
 let localPlayers = JSON.parse(localStorage.getItem('players'));
-console.log(localPlayers.players[0]);
-console.log("lp", localPlayers);
+// console.log(localPlayers.players[0]);
+// console.log("lp", localPlayers);
 
 function getPlayerContainer(position) {
     switch (position) {
@@ -180,8 +182,8 @@ function displayPlayers() {
                         </div>
                     </div>
                 </div>
-                <button onclick="editPlayer(${index})" style="color: white;">Edit</button>
-                <button onclick="deletePlayer(${index})" style="color: white;">Delete</button>
+                <button id="submit" onclick="editPlayer(${index})" style="color: white;">Edit</button>
+                <button onclick="deletePlayer(this,${index})" style="color: white;">Delete</button>
             </div>
         `;
 
@@ -255,7 +257,7 @@ function editPlayer(index) {
     defending.value = player.defending;
     physical.value = player.physical;
 
-    submit.value = 'Update Player';
+    submit.innerHTML = "Update Player";
     submit.onclick = function(event) {
         event.preventDefault();
         updatePlayer(index);
@@ -289,9 +291,11 @@ function updatePlayer(index) {
     clearData();
 }
 
-function deletePlayer(index) {
+function deletePlayer(element,index) { 
+
     players.splice(index, 1);
     localStorage.setItem('player', JSON.stringify(players));
+    element.parentElement.parentElement.innerHTML = "";
     displayPlayers();
 }
 
