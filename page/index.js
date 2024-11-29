@@ -23,7 +23,7 @@ let btn1 = function() {
 }
 let submit= document.getElementById('submit');
 let addPlayerForm = document.getElementById("add-form");
-
+//les inputs
 let name = document.getElementById('name');
 let pos = document.getElementById('pos');
 let rating = document.getElementById('rating');
@@ -39,7 +39,7 @@ let physical = document.getElementById('physical');
 
 let players = JSON.parse(localStorage.getItem('player')) || [];
 let player = JSON.parse(localStorage.getItem('player')) || [];
-
+//position
 let lw = document.getElementById('player-lw');
 let st = document.getElementById('player-st');
 let rw = document.getElementById('player-rw');
@@ -51,6 +51,17 @@ let cb_g = document.getElementById('player-cb-g');
 let cb_d = document.getElementById('player-cb-d');
 let rb = document.getElementById('player-rb');
 let gk = document.getElementById('player-gk');
+
+//les changement
+
+let chang1= document.getElementById('chang1');
+let chang2= document.getElementById('chang2');
+let chang3= document.getElementById('chang3');
+let chang4= document.getElementById('chang4');
+let chang5= document.getElementById('chang5');
+let chang6= document.getElementById('chang6');
+let chang7= document.getElementById('chang7');
+let chang8= document.getElementById('chang8');
 
 addPlayerForm.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -201,7 +212,6 @@ function displayPlayers() {
 
             </div>
         `;
-
         switch (player.position) {
             case 'LW':
                 lw.innerHTML = playerCard.innerHTML;
