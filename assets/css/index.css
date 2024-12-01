@@ -149,10 +149,10 @@ label{
     margin-top: 8px;
     overflow: hidden;
 }
+
 .card{
-    margin-inline: 200px;
-    width: 900px;
-    margin-top: 50px;
+    background-image: url("../image/Design\ sans\ titre\ \(3\).png") ;
+    background-repeat: no-repeat;
 }
 .fut-player-card .player-card-bottom .player-info .player-features {
     margin: 0.3rem auto;
