@@ -10,22 +10,7 @@ body {
     min-height: 700px; */
     background: url("https://media.playstation.com/is/image/SCEA/fifa-19-stadium-background-blur-01-ps4-us-08jun18?$native_nt$") no-repeat center center/cover;
 }
-.attaquant1{
-    margin-left: 350px;
-}
-.item1 {
-    display: flex;
-    margin-left: 250px;
-}
-.item2{
-    display: flex;
-}
-.item3{
-    margin-left: 150px;
-}
-.item4{
-    margin-left: 400px;
-}
+
 .fulll{
     display: flex;
 }
@@ -41,6 +26,29 @@ body {
     color: aliceblue;
 }
 
+
+
+.attaque {
+    display: flex;
+    margin-right:350px ;
+    margin-top: -100px;
+}
+
+.center {
+    display: flex;
+    margin-right:350px ;
+    margin-top: -100px;
+}
+.deffence{
+    display: flex;
+    margin-right:350px ;
+    margin-top: -100px;
+}
+.gol-keaper{
+    display: flex;
+    margin-right:350px ;
+    margin-top: -110px;
+} 
 
 .fut-player-card {
     position: relative;
@@ -188,3 +196,6 @@ label{
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col:last-child {
     border: 0;
 }
+
+
+

@@ -9,6 +9,7 @@ let btn = function() {
         isclick = 1;
     }
 }
+
 const change = document.querySelector("#default-modal")
 
 let isclick1 = true;
@@ -21,8 +22,10 @@ let btn1 = function() {
         isclick1 = 1;
     }
 }
+
 let submit= document.getElementById('submit');
 let addPlayerForm = document.getElementById("add-form");
+
 //les inputs
 let name = document.getElementById('name');
 let pos = document.getElementById('pos');
@@ -37,8 +40,11 @@ let dribbling = document.getElementById('dribbling');
 let defending = document.getElementById('defending');
 let physical = document.getElementById('physical');
 
+
 let players = JSON.parse(localStorage.getItem('player')) || [];
 let player = JSON.parse(localStorage.getItem('player')) || [];
+
+
 //position
 let lw = document.getElementById('player-lw');
 let st = document.getElementById('player-st');
@@ -51,6 +57,7 @@ let cb_g = document.getElementById('player-cb-g');
 let cb_d = document.getElementById('player-cb-d');
 let rb = document.getElementById('player-rb');
 let gk = document.getElementById('player-gk');
+
 
 //les changement
 
@@ -105,6 +112,25 @@ function addPlayer() {
     clearData();
     displayPlayers();
 }
+
+function update() {
+    if (pos.value === "GK") {
+      pace.setAttribute("placeholder", "dividing" );
+      dribbling.setAttribute("placeholder", "handling" ,"label" ,"handling");
+      shooting .setAttribute("placeholder", "kicking");
+      defending.setAttribute("placeholder", "reflexes");
+      passing.setAttribute("placeholder", "speed");
+      physical.setAttribute("placeholder", "positioning");
+    } else {
+      pace.setAttribute("placeholder", "pace");
+      dribbling.setAttribute("placeholder", "dribbling");
+      shooting.setAttribute("placeholder", "shooting");
+      defending.setAttribute("placeholder", "defencing");
+      passing.setAttribute("placeholder", "passing");
+      physical.setAttribute("placeholder", "physical");
+    }
+  }
+  update();
 
 async function fetchPlayers() {
     try {
