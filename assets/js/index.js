@@ -72,7 +72,8 @@ let chang8= document.getElementById('chang8');
 
 addPlayerForm.addEventListener("submit", function(event) {
     event.preventDefault();
-    addPlayer();
+        addPlayer();
+    
 });
 
 function clearData() {
@@ -89,6 +90,9 @@ function clearData() {
     defending.value = '';
     physical.value = '';
 }
+
+
+
 
 function addPlayer() {
     const player = {
@@ -113,10 +117,13 @@ function addPlayer() {
     displayPlayers();
 }
 
+
+
+
 function update() {
     if (pos.value === "GK") {
       pace.setAttribute("placeholder", "dividing" );
-      dribbling.setAttribute("placeholder", "handling" ,"label" ,"handling");
+      dribbling.setAttribute("placeholder", "handling" );
       shooting .setAttribute("placeholder", "kicking");
       defending.setAttribute("placeholder", "reflexes");
       passing.setAttribute("placeholder", "speed");
@@ -134,7 +141,7 @@ function update() {
 
 async function fetchPlayers() {
     try {
-        const response = await fetch('./players.json');
+        const response = await fetch('players.json');
         const data = await response.json();
         localStorage.setItem('players', JSON.stringify(data));
         console.log(data)
