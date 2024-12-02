@@ -21,12 +21,17 @@ body {
     flex-direction: column;
     color: beige;
 }
+#default-modal{
+    margin-top: 100px;
+}
 .nn{
     margin-bottom: 50px;
     color: aliceblue;
 }
 
-
+#crud-modal{
+    margin-top: 100px;
+}
 
 .attaque {
     display: flex;
@@ -63,7 +68,6 @@ body {
     transition: 200ms ease-in;
     margin-left: 50px;
     margin-top: 100px;
-
 }
 
 .fut-player-card .player-card-top {
@@ -75,6 +79,12 @@ body {
 
 label{
     color: aliceblue;
+}
+#btn{
+    margin-left: 100px;
+    width: 200px;
+    font-size: 20px;
+    /* margin-bottom: 50px; */
 }
 
 .fut-player-card .player-card-top .player-master-info {
@@ -161,7 +171,11 @@ label{
 .card{
     background-image: url("../image/Design\ sans\ titre\ \(3\).png") ;
     background-repeat: no-repeat;
+    margin-top: 150px;
+ 
+
 }
+
 .fut-player-card .player-card-bottom .player-info .player-features {
     margin: 0.3rem auto;
     display: grid;
@@ -197,10 +211,77 @@ label{
     border: 0;
 }
 
+.w-full{
+    di
+}
 
-
-@media screen and (max-width: 780px) {
-   {
-   
+@media (max-width: 768px) {
+    .attaque {
+        flex-direction: wrap; 
+        align-items: center; 
     }
-  }
+    /* .haeder {
+        max-width: 80%;
+    } */
+    
+    .fut-player-card {
+        max-width: 90%; 
+        margin: 1rem 0; 
+    }
+    .attaque{
+        margin-top: 0px;
+        margin-left: 350px;
+    }
+    .center{
+        margin-left: 350px;
+    }
+    .deffence{
+        margin-left: 70px;
+    }
+    .gol-keaper{
+        margin-left: 350px;
+    }
+ 
+.card{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+#btn{
+    
+}
+
+}
+@media (max-width:412px) {
+    .card{
+        width: 123%;
+        background-position: center;
+        background-size: cover;
+    }
+    .fut-player-card {
+        max-width: 90%; 
+        margin: 1rem 0; 
+    }
+    .attaque{
+        margin-top: 0px;
+        margin-left: 280px;
+    }
+    #nav-menu{
+        margin-right: 100px;
+    }
+    .center{
+        margin-left: 280px;
+    }
+    /* .deffence{
+        margin-left: 500px;
+    } */
+   
+    .gol-keaper{
+        margin-left: 350px;
+    }
+    /* .haeder {
+        max-width: 60%;
+    } */
+    #player-lb{
+    }
+}

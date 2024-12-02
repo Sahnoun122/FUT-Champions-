@@ -76,6 +76,7 @@ addPlayerForm.addEventListener("submit", function(event) {
     
 });
 
+
 function clearData() {
     name.value = '';
     pos.value = 'Choose a position';
@@ -139,22 +140,95 @@ function update() {
   }
   update();
 
-async function fetchPlayers() {
-    try {
-        const response = await fetch('players.json');
-        const data = await response.json();
-        localStorage.setItem('players', JSON.stringify(data));
-        console.log(data)
-        displayPlayers();
-    } catch (error) {
-        console.error('Failed to fetch players', error);
-    }
-}
+// async function fetchPlayers() {
+//     try {
+//         const response = await fetch('players.json');
+//         const data = await response.json();
+//         localStorage.setItem('players', JSON.stringify(data));
+//         displayPlayers();
+        
+//     } catch (error) {
+//         console.error('Failed to fetch players', error);
+//     }
+// }
+
+
+
 
 //players array
-let localPlayers = JSON.parse(localStorage.getItem('players'));
+// let localPlayers = JSON.parse(localStorage.getItem('players'));
 // console.log(localPlayers.players[0]);
 // console.log("lp", localPlayers);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    let cardfetch = document.querySelector('.fut-player-card');
+    const div = document.createElement("div")
+    div.className = "fut-player-card"
+    async function fetchcard() {
+        const response = await fetch('./players.json');
+        const data = await response.json();
+        console.log(data.players);
+        players = data.players;
+        players.forEach(player=>{
+            div.innerHTML  += `
+            <div class="player-card-top">
+                <div class="player-master-info">
+                    <div class="player-rating"><span>${player.rating}</span></div>
+                    <div class="player-position"><span>${player.position}</span></div>
+                    <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
+                    <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
+                </div>
+                <div class="player-picture"><img src="${player.photo}" alt="${player.name}" draggable="false"/>
+                    <div class="player-extra"><span>${player.position}</span></div>
+                </div>
+            </div>
+            <div class="player-card-bottom">
+                <div class="player-info">
+                    <div class="player-name"><span>${player.name}</span></div>
+                    <div class="player-features">
+                        <div class="player-features-col">
+                            <span>
+                                <div class="player-feature-value">${player.pace}</div>
+                                <div class="player-feature-title">PAC</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">${player.shooting}</div>
+                                <div class="player-feature-title">SHO</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">${player.passing}</div>
+                                <div class="player-feature-title">PAS</div>
+                            </span>
+                        </div>
+                        <div class="player-features-col">
+                            <span>
+                                <div class="player-feature-value">${player.dribbling}</div>
+                                <div class="player-feature-title">DRI</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">${player.defending}</div>
+                                <div class="player-feature-title">DEF</div>
+                            </span>
+                            <span>
+                                <div class="player-feature-value">${player.physical}</div>
+                                <div class="player-feature-title">PHY</div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        })
+           
+            document.getElementById("cont").appendChild(div);
+        }
+    fetchcard();
+
+    
+});
+
+
 
 function getPlayerContainer(position) {
     switch (position) {
@@ -296,7 +370,6 @@ function displayPlayers() {
 }
 
 displayPlayers();
-document.addEventListener('DOMContentLoaded', fetchPlayers);
 
 
 function editPlayer(index){
@@ -337,5 +410,4 @@ function deletePlayer(element,index) {
     displayPlayers();
 }
 
-document.addEventListener('DOMContentLoaded', fetchPlayers);
 

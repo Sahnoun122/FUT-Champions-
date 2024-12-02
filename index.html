@@ -14,39 +14,40 @@
 </head>
 <body>
 
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
-    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-      <a href="index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img src="assets/image/fut-logo.png" class="h-8 w-10" alt=""  />
-          <!-- <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span> -->
-      </a>
-      <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
-          <span class="sr-only">Open main menu</span>
-          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-          </svg>
-      </button>
-      <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-          <li>
-            <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500" aria-current="page">Home</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Pricing</a>
-          </li>
-          <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-          </li>
-        </ul>
-      </div>
+    <Header
+    class="haeder flex items-center justify-between py-3 px-5 my-4 mx-auto rounded-md bg-white drop-shadow-md w-[100%]"
+    style="max-width: 1000px; position: fixed;top: 0;left: 50%; transform: translate(-50%); z-index:99;">
+    <div class="logo w-[70px] h-[50px]">
+        <img class="w-[100%] h-[100%]" src="assets/image/fut-logo.png" alt="watchify">
     </div>
-  </nav>
+    <!-- <form action="/"
+        class="bg-slate-100 rounded-md py-1 pr-3 flex items-center justify-between w-[30%] drop-shadow-sm">
+        <input type="search"
+            class="bg-transparent w-[90%] h-[25px] rounded-md pl-3 py-0.5 outline-none text-xs placeholder:text-xs"
+            placeholder="Recherche..">
+        <i class="fa fa-search cursor-pointer"></i>
+    </form> -->
+    
+    <nav>
+
+        <ul class="flex items-center" id="nav-menu">
+            <li class="link mr-5"><a
+                    class="text-sm tracking-wide font-normal hover:text-blue-600 transition-colors ease-in-out"
+                    href="index.html">Accueil</a></li>
+            <li class="link mr-5"><a
+                    class="text-sm tracking-wide font-normal hover:text-blue-600 transition-colors ease-in-out"
+                    href="#">Players</a></li>
+            <li class="link mr-7"><a
+                    class="text-sm tracking-wide font-normal hover:text-blue-600 transition-colors ease-in-out"
+                    href="#">Apropos</a></li>
+        </ul>
+    </nav>
+  
+
+   
+
+
+</Header>
 
 
 <!-- Modal toggle -->
@@ -62,7 +63,7 @@
                   <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                       Create New joueur
                   </h3>
-                  <button type="button" onclick="btn()"   class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                  <button type="button" onclick="btn()" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
                       <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
                       </svg>
@@ -79,7 +80,7 @@
                
                     <div class="col-span-2 sm:col-span-1">
                       <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">position</label>
-                      <select type="text" id="pos" onchange=" update() " placeholder="Position" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                      <select type="text" id="pos" onchange="update()" placeholder="Position" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                           <option selected="">Select Position</option>
 
                           <option value="RW">RW</option>
@@ -103,35 +104,35 @@
                   </div>
               
                     <div class="col-span-2 sm:col-span-1">
-                      <input type="url" id="club" placeholder="Club" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="url" id="club" placeholder="Club" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="url" id="photo" placeholder="URL de la photo" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="url" id="photo" placeholder="URL de la photo" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="pace" placeholder="Vitesse" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="number" id="pace" placeholder="Vitesse" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="shooting" placeholder="Tir" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="number" id="shooting" placeholder="Tir" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="passing" placeholder="Passes" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="number" id="passing" placeholder="Passes" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="dribbling" placeholder="Dribbles" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="number" id="dribbling" placeholder="Dribbles" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="defending" placeholder="Défense" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="number" id="defending" placeholder="Défense" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="">
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="physical" placeholder="Physique" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="$2999" required="">
+                      <input type="number" id="physical" placeholder="Physique" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
                   </div>
 
                 <button type="submit" id="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -153,24 +154,9 @@
     <div class="player-form">
     
       </div>
-        <!-- <form id="add-form">
-            <input type="text" id="name" placeholder="Nom" required>
-            <input type="text" id="pos" placeholder="Position" required>
-            <input type="number" id="rating" placeholder="Note" required>
-            <input type="text" id="nationality" placeholder="Nationalité" required>
-            <input type="text" id="club" placeholder="Club" required>
-            <input type="url" id="photo" placeholder="URL de la photo" required>
-            <input type="number" id="pace" placeholder="Vitesse" required>
-            <input type="number" id="shooting" placeholder="Tir" required>
-            <input type="number" id="passing" placeholder="Passes" required>
-            <input type="number" id="dribbling" placeholder="Dribbles" required>
-            <input type="number" id="defending" placeholder="Défense" required>
-            <input type="number" id="physical" placeholder="Physique" required>
-            <button type="submit">Ajouter</button>
-        </form> -->
+       
     </div>
 
-    <!-- class="card bg-gray-800 rounded-md shadow-md shadow-[#5ce1e6] md:w-[70%] w-[100%]" -->
 
     <div class="players-list" id="players-list">
 
@@ -178,17 +164,17 @@
 
     <section class="card">
         
-        <button data-modal-target="crud-modal" onclick="btn()"  data-modal-toggle="crud-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"  type="button">
+        <button data-modal-target="crud-modal" onclick="btn()" id="btn" data-modal-toggle="crud-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"  type="button">
             Ajouter joueur
           </button>
 
         <div id="field" class="w-[100%] flex flex-col items-center justify-center gap-10 rounded-md shadow-md p-10">
          
             <!--attaque-->
-            <div class="attaque flex gap-10 justify-center" >
+            <div class="attaque flex  justify-center" >
                
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-lw">
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-lw">
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -218,29 +204,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -249,8 +235,8 @@
                     </div>
                    
                 </div>
-                <div class="flex flex-col items-center justify-center" >
-                    <div class="fut-player-card cursor-pointer" id="player-st" >
+                <div class="flex flex-col items-center justify-center " >
+                    <div class="fut-player-card cursor-pointer  scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-st" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -280,29 +266,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -311,7 +297,7 @@
                     </div>
                    
                 </div>
-                <div class="flex flex-col items-center justify-center" >
+                <div class="flex flex-col items-center justify-center  scale-[0.5] lg:scale-[1] md:scale-[0.7]" >
                     <div class="fut-player-card cursor-pointer" id="player-rw" >
                         <div class="player-card-top">
                             <div class="player-master-info">
@@ -342,29 +328,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -377,9 +363,9 @@
     
             <!--center-->
     
-            <div class="center flex gap-10 justify-center">
+            <div class="center flex  justify-center">
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-cm-g" >
+                    <div class="fut-player-card cursor-pointer  scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-cm-g" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -409,29 +395,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -442,7 +428,7 @@
                 </div>
     
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer " id="player-cm-c">
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-cm-c">
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -504,7 +490,7 @@
                     
                 </div>
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-cm-d" >
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-cm-d" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -568,9 +554,9 @@
             </div>
     
             <!--defence-->
-            <div class="deffence flex gap-10 justify-center">
+            <div class="deffence flex justify-center relative left-[20%] lg:left-[0]">
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-lb" >
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-lb" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -633,7 +619,7 @@
                 </div>
     
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-cb-g" >
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-cb-g" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -696,7 +682,7 @@
                 </div>
     
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-cb-d" >
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-cb-d" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -759,7 +745,7 @@
                 </div>
     
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-rb" >
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-rb" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -826,7 +812,7 @@
             <!--gol keaper-->
             <div class="gol-keaper flex flex-col items-center justify-center">
                 <div class="flex flex-col items-center justify-center">
-                    <div class="fut-player-card cursor-pointer" id="player-gk" >
+                    <div class="fut-player-card cursor-pointer scale-[0.5] lg:scale-[1] md:scale-[0.7]" id="player-gk" >
                         <div class="player-card-top">
                             <div class="player-master-info">
                                 <div class="player-rating">
@@ -893,8 +879,6 @@
 
 </section>
 
-<h2 style="color: azure; margin-left: 700px; margin-top: 20px; font-size: 23px;">les changement</h2>
-
 
 <!-- Modal toggle
 <button data-modal-target="default-modal" onclick="btn1()"  data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
@@ -902,15 +886,14 @@
   </button> -->
   
   <!-- Main modal -->
-  <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative ml-36 p-10 w-full max-w-2xl max-h-full">
+  <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full mt-20">
+      <div class="relative ml-36 p-10 w-full max-w-5xl max-h-7xl	">
           <!-- Modal content -->
           <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
               <!-- Modal header -->
               <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                   <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                      Terms of Service
-                  </h3>
+                     changement                  </h3>
                   <button type="button" onclick="btn1()"  class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
                       <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
@@ -918,315 +901,70 @@
                       <span class="sr-only">Close modal</span>
                   </button>
               </div>
+              <section class="w-full flex " onclick="changement(this)" id="cont">
+
+              </section>
              <!--defence-->
-   <div class="deffence flex gap-10 justify-center">
-    <div class="flex flex-col items-center justify-center">
-        <div class="fut-player-card cursor-pointer" id="chang1">
-            <div class="player-card-top">
-                <div class="player-master-info">
-                    <div class="player-rating">
-                        <span id="player-rating"></span>
-                    </div>
-                    <div class="player-position">
-                        <span id="player-position"></span>
-                    </div>
-                    <div class="player-nation">
-                        <span id="player-nation"></span>
-                    </div>
-                    <div class="player-club">
-                        <span id="player-club"></span>
-                    </div>
-                </div>
-                <div class="player-picture">
-                </div>
-            </div>
-            <div class="player-card-bottom">
-                <div class="player-info">
-                    <!-- Player Name-->
-                    <div class="player-name">
-                        <span id="player-name"></span>
-                    </div>
-                    <!-- Player Features-->
-                    <div class="player-features">
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="pace"></div>
-                                <div class="player-feature-title">PAC</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="shooting"></div>
-                                <div class="player-feature-title">SHO</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="passing"></div>
-                                <div class="player-feature-title">PAS</div>
-                            </span>
-                        </div>
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="driplling"></div>
-                                <div class="player-feature-title">DRI</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="defending"></div>
-                                <div class="player-feature-title">DEF</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="physical"></div>
-                                <div class="player-feature-title">PHY</div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-    </div>
-
-    <div class="flex flex-col items-center justify-center">
-        <div class="fut-player-card cursor-pointer" id="change2" >
-            <div class="player-card-top">
-                <div class="player-master-info">
-                    <div class="player-rating">
-                        <span id="player-rating"></span>
-                    </div>
-                    <div class="player-position">
-                        <span id="player-position"></span>
-                    </div>
-                    <div class="player-nation">
-                        <span id="player-nation"></span>
-                    </div>
-                    <div class="player-club">
-                        <span id="player-club"></span>
-                    </div>
-                </div>
-                <div class="player-picture">
-                </div>
-            </div>
-            <div class="player-card-bottom">
-                <div class="player-info">
-                    <!-- Player Name-->
-                    <div class="player-name">
-                        <span id="player-name"></span>
-                    </div>
-                    <!-- Player Features-->
-                    <div class="player-features">
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="pace"></div>
-                                <div class="player-feature-title">PAC</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="shooting"></div>
-                                <div class="player-feature-title">SHO</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="passing"></div>
-                                <div class="player-feature-title">PAS</div>
-                            </span>
-                        </div>
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="driplling"></div>
-                                <div class="player-feature-title">DRI</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="defending"></div>
-                                <div class="player-feature-title">DEF</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="physical"></div>
-                                <div class="player-feature-title">PHY</div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="flex flex-col items-center justify-center">
-        <div class="fut-player-card cursor-pointer" id="change3" >
-            <div class="player-card-top">
-                <div class="player-master-info">
-                    <div class="player-rating">
-                        <span id="player-rating"></span>
-                    </div>
-                    <div class="player-position">
-                        <span id="player-position"></span>
-                    </div>
-                    <div class="player-nation">
-                        <span id="player-nation"></span>
-                    </div>
-                    <div class="player-club">
-                        <span id="player-club"></span>
-                    </div>
-                </div>
-                <div class="player-picture">
-                </div>
-            </div>
-            <div class="player-card-bottom">
-                <div class="player-info">
-                    <!-- Player Name-->
-                    <div class="player-name">
-                        <span id="player-name"></span>
-                    </div>
-                    <!-- Player Features-->
-                    <div class="player-features">
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="pace"></div>
-                                <div class="player-feature-title">PAC</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="shooting"></div>
-                                <div class="player-feature-title">SHO</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="passing"></div>
-                                <div class="player-feature-title">PAS</div>
-                            </span>
-                        </div>
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="driplling"></div>
-                                <div class="player-feature-title">DRI</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="defending"></div>
-                                <div class="player-feature-title">DEF</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="physical"></div>
-                                <div class="player-feature-title">PHY</div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-
-    <div class="flex flex-col items-center justify-center">
-        <div class="fut-player-card cursor-pointer" id="change4">
-            <div class="player-card-top">
-                <div class="player-master-info">
-                    <div class="player-rating">
-                        <span id="player-rating"></span>
-                    </div>
-                    <div class="player-position">
-                        <span id="player-position"></span>
-                    </div>
-                    <div class="player-nation">
-                        <span id="player-nation"></span>
-                    </div>
-                    <div class="player-club">
-                        <span id="player-club"></span>
-                    </div>
-                </div>
-                <div class="player-picture">
-                </div>
-            </div>
-            <div class="player-card-bottom">
-                <div class="player-info">
-                    <!-- Player Name-->
-                    <div class="player-name">
-                        <span id="player-name"></span>
-                    </div>
-                    <!-- Player Features-->
-                    <div class="player-features">
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="pace"></div>
-                                <div class="player-feature-title">PAC</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="shooting"></div>
-                                <div class="player-feature-title">SHO</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="passing"></div>
-                                <div class="player-feature-title">PAS</div>
-                            </span>
-                        </div>
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value" id="driplling"></div>
-                                <div class="player-feature-title">DRI</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="defending"></div>
-                                <div class="player-feature-title">DEF</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value" id="physical"></div>
-                                <div class="player-feature-title">PHY</div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
+   <div class="deffence flex gap-15 justify-center ml-40">
+  
 </div>
 
-<div class="deffence flex gap-10 justify-center">
+<div class="deffence flex justify-center ml-36">
     <div class="flex flex-col items-center justify-center">
-        <div class="fut-player-card cursor-pointer" id="chang5">
+        <div class="fut-player-card cursor-pointer" id="chang5" onclick="changement(this)">
             <div class="player-card-top">
                 <div class="player-master-info">
                     <div class="player-rating">
-                        <span id="player-rating"></span>
+                        <span id="player-rating"> 87</span>
                     </div>
                     <div class="player-position">
-                        <span id="player-position"></span>
+                        <span id="player-position">RB</span>
                     </div>
                     <div class="player-nation">
                         <span id="player-nation"></span>
+                        <img src="https://cdn.sofifa.net/flags/gb-eng.png" alt="">
                     </div>
                     <div class="player-club">
                         <span id="player-club"></span>
                     </div>
                 </div>
                 <div class="player-picture">
+                    <img src="https://cdn.sofifa.net/players/231/281/25_120.png" alt="">
                 </div>
             </div>
             <div class="player-card-bottom">
                 <div class="player-info">
-                    <!-- Player Name-->
+                     <!-- Player Name -->
                     <div class="player-name">
-                        <span id="player-name"></span>
+                        <span id="player-name">Trent</span>
                     </div>
                     <!-- Player Features-->
                     <div class="player-features">
                         <div class="player-features-col">
                             <span>
-                                <div class="player-feature-value" id="pace"></div>
+                                <div class="player-feature-value" id="pace">76</div>
                                 <div class="player-feature-title">PAC</div>
                             </span>
                             <span>
-                                <div class="player-feature-value" id="shooting"></div>
+                                <div class="player-feature-value" id="shooting"> 66</div>
                                 <div class="player-feature-title">SHO</div>
                             </span>
                             <span>
-                                <div class="player-feature-value" id="passing"></div>
+                                <div class="player-feature-value" id="passing"> 89</div>
                                 <div class="player-feature-title">PAS</div>
                             </span>
                         </div>
                         <div class="player-features-col">
                             <span>
-                                <div class="player-feature-value" id="driplling"></div>
+                                <div class="player-feature-value" id="driplling"> 80</div>
                                 <div class="player-feature-title">DRI</div>
                             </span>
                             <span>
-                                <div class="player-feature-value" id="defending"></div>
+                                <div class="player-feature-value" id="defending">79</div>
                                 <div class="player-feature-title">DEF</div>
                             </span>
                             <span>
-                                <div class="player-feature-value" id="physical"></div>
+                                <div class="player-feature-value" id="physical">71</div>
                                 <div class="player-feature-title">PHY</div>
                             </span>
                         </div>
@@ -1242,36 +980,37 @@
             <div class="player-card-top">
                 <div class="player-master-info">
                     <div class="player-rating">
-                        <span id="player-rating"></span>
+                        <span id="player-rating">88</span>
                     </div>
                     <div class="player-position">
-                        <span id="player-position"></span>
+                        <span id="player-position">CM</span>
                     </div>
                     <div class="player-nation">
                         <span id="player-nation"></span>
+                        <img src="https://cdn.sofifa.net/flags/pt.png" alt="">
                     </div>
                     <div class="player-club">
                         <span id="player-club"></span>
+                        <img src="https://cdn.sofifa.net/meta/team/14/120.png" alt="">
                     </div>
                 </div>
                 <div class="player-picture">
+                    <img src="https://cdn.sofifa.net/players/212/198/25_120.png" alt="">
                 </div>
             </div>
             <div class="player-card-bottom">
                 <div class="player-info">
-                    <!-- Player Name-->
                     <div class="player-name">
-                        <span id="player-name"></span>
+                        <span id="player-name">Bruno</span>
                     </div>
-                    <!-- Player Features-->
                     <div class="player-features">
                         <div class="player-features-col">
                             <span>
-                                <div class="player-feature-value" id="pace"></div>
+                                <div class="player-feature-value" id="pace">75</div>
                                 <div class="player-feature-title">PAC</div>
                             </span>
                             <span>
-                                <div class="player-feature-value" id="shooting"></div>
+                                <div class="player-feature-value" id="shooting">85</div>
                                 <div class="player-feature-title">SHO</div>
                             </span>
                             <span>
@@ -1281,7 +1020,7 @@
                         </div>
                         <div class="player-features-col">
                             <span>
-                                <div class="player-feature-value" id="driplling"></div>
+                                <div class="player-feature-value" id="driplling"> 89</div>
                                 <div class="player-feature-title">DRI</div>
                             </span>
                             <span>
@@ -1322,11 +1061,9 @@
             </div>
             <div class="player-card-bottom">
                 <div class="player-info">
-                    <!-- Player Name-->
                     <div class="player-name">
                         <span id="player-name"></span>
                     </div>
-                    <!-- Player Features-->
                     <div class="player-features">
                         <div class="player-features-col">
                             <span>
@@ -1385,11 +1122,9 @@
             </div>
             <div class="player-card-bottom">
                 <div class="player-info">
-                    <!-- Player Name-->
                     <div class="player-name">
                         <span id="player-name"></span>
                     </div>
-                    <!-- Player Features-->
                     <div class="player-features">
                         <div class="player-features-col">
                             <span>
@@ -1424,13 +1159,14 @@
             </div>
         </div>
     </div>
-</div>
-
-
-            
+</div>   
           </div>
       </div>
-  </div>
+  </div> 
+
+  <!-- <section class="w-full flex" id="cont">
+
+  </section> -->
   
 <script src="assets/js/index.js"></script>
 </body>
