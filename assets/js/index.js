@@ -330,6 +330,7 @@ function deletePlayer(element,index) {
 }
 
 
+
 function validateForm() {
     let name = document.getElementById('name').value;
     let pos = document.getElementById('pos').value;
@@ -348,71 +349,90 @@ function validateForm() {
     const posRegex = /^(RW|ST|CM-G|CM|CM-D|CB|CB-G|GK|CDM|LB|RB)$/;
     const ratingRegex = /^(?:[1-9]?[0-9]|100)$/;
     const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
-    const numberRegex = /^[0-9]{1,3}$/;
+    const numberRegex = /^[0-9]{1,2}$/;
   
     document.querySelectorAll('.text-red-500').forEach(span => span.textContent = '');
   
     let isValid = true; 
   
-
     if (!nameRegex.test(name)) {
-      nameRegex.textContent = "Le nom doit comporter entre 2 et 50 lettres uniquement.";
+   alert( "Le nom doit comporter entre 2 et 50 lettres uniquement.");
       isValid = false;
+      return;
     }
-  
     if (!posRegex.test(pos)) {
-      posRegex.textContent = "Veuillez sélectionner une position valide.";
-      isValid = false;
+       alert("Veuillez sélectionner une position valide.");
+          isValid = false;
+      return;
     }
-  
     if (!ratingRegex.test(rating)) {
-      ratingRegex.textContent = "La note doit être un nombre entre 0 et 100.";
+        alert("La note doit être un nombre entre 0 et 100.");
       isValid = false;
+      return;
+
     }
   
     if (!urlRegex.test(nationality)) {
-      document.getElementById('nationality-error').textContent = "La nationalité doit être une URL valide.";
+        alert("La nationalité doit être une URL valide.");
       isValid = false;
+      return;
+
     }
   
     if (!urlRegex.test(club)) {
-      document.getElementById('club-error').textContent = "Le club doit être une URL valide.";
+        alert( "Le club doit être une URL valide.");
       isValid = false;
+      return;
+
     }
   
     if (!urlRegex.test(photo)) {
-      document.getElementById('photo-error').textContent = "La photo doit être une URL valide.";
+        alert( "La photo doit être une URL valide.");
       isValid = false;
+      return;
+
     }
   
     if (!numberRegex.test(pace)) {
-      document.getElementById('pace-error').textContent = "La vitesse doit être un nombre compris entre 0 et 999.";
+        alert("La vitesse doit être un nombre compris entre 0 et 999.");
       isValid = false;
+      return;
+
     }
   
     if (!numberRegex.test(shooting)) {
-      document.getElementById('shooting-error').textContent = "Le tir doit être un nombre compris entre 0 et 999.";
+        alert(        "Le tir doit être un nombre compris entre 0 et 100.");
       isValid = false;
+
+      return;
+
     }
   
     if (!numberRegex.test(passing)) {
-      document.getElementById('passing-error').textContent = "Les passes doivent être un nombre compris entre 0 et 999.";
+        alert("Les passes doivent être un nombre compris entre 0 et 100.");
       isValid = false;
+      return;
+
     }
   
     if (!numberRegex.test(dribbling)) {
-      document.getElementById('dribbling-error').textContent = "Les dribbles doivent être un nombre compris entre 0 et 999.";
+        alert("Les dribbles doivent être un nombre compris entre 0 et 100.");
       isValid = false;
+      return;
+
     }
   
     if (!numberRegex.test(defending)) {
-      document.getElementById('defending-error').textContent = "La défense doit être un nombre compris entre 0 et 999.";
+        alert( "La défense doit être un nombre compris entre 0 et 100.");
       isValid = false;
+      return;
+
     }
   
     if (!numberRegex.test(physical)) {
-      document.getElementById('physical-error').textContent = "Le physique doit être un nombre compris entre 0 et 999.";
+        alert("Le physique doit être un nombre compris entre 0 et 100.")
       isValid = false;
+      return;
     }
   
     return isValid; 
@@ -422,5 +442,3 @@ function validateForm() {
       e.preventDefault(); 
     }
   });
-
-

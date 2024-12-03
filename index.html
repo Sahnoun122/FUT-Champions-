@@ -75,12 +75,12 @@
                 <div class="grid gap-4 mb-4 grid-cols-2">
                   <div class="col-span-2 sm:col-span-1">
                       <label for="text" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">name</label>
-                      <input type="text" name="name" id="name" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name" required="">
+                      <input type="text" name="name" id="name"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name" >
                   </div>
                
                     <div class="col-span-2 sm:col-span-1">
                       <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">position</label>
-                      <select type="text" id="pos" onchange="update()" placeholder="Position" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                      <select type="text" id="pos" onchange="update()" placeholder="Position" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
                           <option selected="">Select Position</option>
 
                           <option value="RW">RW</option>
@@ -97,42 +97,42 @@
                       </select>
                   </div>
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="rating" placeholder="Note" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name" required="">
+                      <input type="number" id="rating" placeholder="Note" max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name" >
                   </div>
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="url" id="nationality" placeholder="Nationalité" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name" required="">
+                      <input type="url" id="nationality" placeholder="Nationalité"  class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="name">
                   </div>
               
                     <div class="col-span-2 sm:col-span-1">
-                      <input type="url" id="club" placeholder="Club" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="url" id="club" placeholder="Club"   class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="url" id="photo" placeholder="URL de la photo" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="url" id="photo" placeholder="URL de la photo"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="pace" placeholder="Vitesse" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="number" id="pace" placeholder="Vitesse"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="shooting" placeholder="Tir" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="number" id="shooting" placeholder="Tir"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="passing" placeholder="Passes" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="number" id="passing" placeholder="Passes"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="dribbling" placeholder="Dribbles" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="number" id="dribbling" placeholder="Dribbles"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="defending" placeholder="Défense" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required="">
+                      <input type="number" id="defending" placeholder="Défense"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" >
                   </div>
 
                   <div class="col-span-2 sm:col-span-1">
-                      <input type="number" id="physical" placeholder="Physique" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"  required="">
+                      <input type="number" id="physical" placeholder="Physique"  max="100" min="1" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" >
                   </div>
 
                 <button type="submit" id="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
@@ -458,29 +458,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -520,29 +520,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -586,29 +586,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -649,29 +649,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -712,29 +712,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -775,29 +775,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">PAC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">SHO</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">PAS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">DRI</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">DEF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">PHY</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
@@ -842,29 +842,29 @@
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="pace"></div>
-                                            <div class="player-feature-title">DIV</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="shooting"></div>
-                                            <div class="player-feature-title">HAN</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="passing"></div>
-                                            <div class="player-feature-title">KIC</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                     <div class="player-features-col">
                                         <span>
                                             <div class="player-feature-value" id="driplling"></div>
-                                            <div class="player-feature-title">REF</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="defending"></div>
-                                            <div class="player-feature-title">SPE</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                         <span>
                                             <div class="player-feature-value" id="physical"></div>
-                                            <div class="player-feature-title">POS</div>
+                                            <div class="player-feature-title"></div>
                                         </span>
                                     </div>
                                 </div>
