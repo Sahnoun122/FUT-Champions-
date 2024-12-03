@@ -42,7 +42,7 @@ let physical = document.getElementById('physical');
 
 
 let players = JSON.parse(localStorage.getItem('player')) || [];
-let player = JSON.parse(localStorage.getItem('player')) || [];
+// let player = JSON.parse(localStorage.getItem('player')) || [];
 
 
 //position
@@ -95,6 +95,9 @@ function clearData() {
 
 
 
+
+
+
 function addPlayer() {
     const player = {
         name: name.value,
@@ -140,93 +143,8 @@ function update() {
   }
   update();
 
-// async function fetchPlayers() {
-//     try {
-//         const response = await fetch('players.json');
-//         const data = await response.json();
-//         localStorage.setItem('players', JSON.stringify(data));
-//         displayPlayers();
-        
-//     } catch (error) {
-//         console.error('Failed to fetch players', error);
-//     }
-// }
 
 
-
-
-//players array
-// let localPlayers = JSON.parse(localStorage.getItem('players'));
-// console.log(localPlayers.players[0]);
-// console.log("lp", localPlayers);
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    let cardfetch = document.querySelector('.fut-player-card');
-    const div = document.createElement("div")
-    div.className = "fut-player-card"
-    async function fetchcard() {
-        const response = await fetch('./players.json');
-        const data = await response.json();
-        console.log(data.players);
-        players = data.players;
-        players.forEach(player=>{
-            div.innerHTML  += `
-            <div class="player-card-top">
-                <div class="player-master-info">
-                    <div class="player-rating"><span>${player.rating}</span></div>
-                    <div class="player-position"><span>${player.position}</span></div>
-                    <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
-                    <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
-                </div>
-                <div class="player-picture"><img src="${player.photo}" alt="${player.name}" draggable="false"/>
-                    <div class="player-extra"><span>${player.position}</span></div>
-                </div>
-            </div>
-            <div class="player-card-bottom">
-                <div class="player-info">
-                    <div class="player-name"><span>${player.name}</span></div>
-                    <div class="player-features">
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value">${player.pace}</div>
-                                <div class="player-feature-title">PAC</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value">${player.shooting}</div>
-                                <div class="player-feature-title">SHO</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value">${player.passing}</div>
-                                <div class="player-feature-title">PAS</div>
-                            </span>
-                        </div>
-                        <div class="player-features-col">
-                            <span>
-                                <div class="player-feature-value">${player.dribbling}</div>
-                                <div class="player-feature-title">DRI</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value">${player.defending}</div>
-                                <div class="player-feature-title">DEF</div>
-                            </span>
-                            <span>
-                                <div class="player-feature-value">${player.physical}</div>
-                                <div class="player-feature-title">PHY</div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-        })
-           
-            document.getElementById("cont").appendChild(div);
-        }
-    fetchcard();
-
-    
-});
 
 
 
@@ -395,6 +313,7 @@ function editPlayer(index){
     console.log(name.value)
     
     };
+
 function save(){
     modal.style.display='none';
 
@@ -409,5 +328,99 @@ function deletePlayer(element,index) {
     element.parentElement.parentElement.innerHTML = "";
     displayPlayers();
 }
+
+
+function validateForm() {
+    let name = document.getElementById('name').value;
+    let pos = document.getElementById('pos').value;
+    let rating = document.getElementById('rating').value;
+    let nationality = document.getElementById('nationality').value;
+    let club = document.getElementById('club').value;
+    let photo = document.getElementById('photo').value;
+    let pace = document.getElementById('pace').value;
+    let shooting = document.getElementById('shooting').value;
+    let passing = document.getElementById('passing').value;
+    let dribbling = document.getElementById('dribbling').value;
+    let defending = document.getElementById('defending').value;
+    let physical = document.getElementById('physical').value;
+  
+    const nameRegex = /^[a-zA-Z\s]{2,50}$/;
+    const posRegex = /^(RW|ST|CM-G|CM|CM-D|CB|CB-G|GK|CDM|LB|RB)$/;
+    const ratingRegex = /^(?:[1-9]?[0-9]|100)$/;
+    const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+    const numberRegex = /^[0-9]{1,3}$/;
+  
+    document.querySelectorAll('.text-red-500').forEach(span => span.textContent = '');
+  
+    let isValid = true; 
+  
+
+    if (!nameRegex.test(name)) {
+      nameRegex.textContent = "Le nom doit comporter entre 2 et 50 lettres uniquement.";
+      isValid = false;
+    }
+  
+    if (!posRegex.test(pos)) {
+      posRegex.textContent = "Veuillez sélectionner une position valide.";
+      isValid = false;
+    }
+  
+    if (!ratingRegex.test(rating)) {
+      ratingRegex.textContent = "La note doit être un nombre entre 0 et 100.";
+      isValid = false;
+    }
+  
+    if (!urlRegex.test(nationality)) {
+      document.getElementById('nationality-error').textContent = "La nationalité doit être une URL valide.";
+      isValid = false;
+    }
+  
+    if (!urlRegex.test(club)) {
+      document.getElementById('club-error').textContent = "Le club doit être une URL valide.";
+      isValid = false;
+    }
+  
+    if (!urlRegex.test(photo)) {
+      document.getElementById('photo-error').textContent = "La photo doit être une URL valide.";
+      isValid = false;
+    }
+  
+    if (!numberRegex.test(pace)) {
+      document.getElementById('pace-error').textContent = "La vitesse doit être un nombre compris entre 0 et 999.";
+      isValid = false;
+    }
+  
+    if (!numberRegex.test(shooting)) {
+      document.getElementById('shooting-error').textContent = "Le tir doit être un nombre compris entre 0 et 999.";
+      isValid = false;
+    }
+  
+    if (!numberRegex.test(passing)) {
+      document.getElementById('passing-error').textContent = "Les passes doivent être un nombre compris entre 0 et 999.";
+      isValid = false;
+    }
+  
+    if (!numberRegex.test(dribbling)) {
+      document.getElementById('dribbling-error').textContent = "Les dribbles doivent être un nombre compris entre 0 et 999.";
+      isValid = false;
+    }
+  
+    if (!numberRegex.test(defending)) {
+      document.getElementById('defending-error').textContent = "La défense doit être un nombre compris entre 0 et 999.";
+      isValid = false;
+    }
+  
+    if (!numberRegex.test(physical)) {
+      document.getElementById('physical-error').textContent = "Le physique doit être un nombre compris entre 0 et 999.";
+      isValid = false;
+    }
+  
+    return isValid; 
+  }
+  document.getElementById('add-form').addEventListener('submit', function (e) {
+    if (!validateForm()) {
+      e.preventDefault(); 
+    }
+  });
 
 
