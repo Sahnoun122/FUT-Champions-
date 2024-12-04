@@ -161,7 +161,6 @@ function affichage() {
                 <div class="player-master-info">
                     <div class="player-rating"><span>${player.rating}</span></div>
                     <div class="player-position"><span>${player.position}</span></div>
-                    <div class="player-change"><span>${player.change}</span></div>
                     <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
                     <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
                 </div>

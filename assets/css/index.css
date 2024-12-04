@@ -170,11 +170,12 @@ label{
     width: 80%;
     display: block;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 12px;
     text-transform: uppercase;
     border-bottom: 2px solid rgba(233, 204, 116, 0.1);
     padding-bottom: 0.1rem;
-    margin-top: 8px;
+    margin-top: 10px;
+    margin-left: 10px;
     overflow: hidden;
 }
 
@@ -191,7 +192,7 @@ label{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     justify-content: center;
-    margin-top: -3px;
+    /* margin-top: -3px; */
 }
 
 .fut-player-card .player-card-bottom .player-info .player-features .player-features-col {
