@@ -10,19 +10,6 @@ let btn = function() {
     }
 }
 
-const change = document.querySelector("#default-modal")
-
-let isclick1 = true;
-let btn1 = function() {
-    if (isclick1 == 1) {
-        change.style.display = "block";
-        isclick1 = 0;
-    } else {
-        change.style.display = "none";
-        isclick1 = 1;
-    }
-}
-
 let submit= document.getElementById('submit');
 let addPlayerForm = document.getElementById("add-form");
 
@@ -41,39 +28,35 @@ let defending = document.getElementById('defending');
 let physical = document.getElementById('physical');
 
 
+//localstorage
 let players = JSON.parse(localStorage.getItem('player')) || [];
+
 // let player = JSON.parse(localStorage.getItem('player')) || [];
 
+//change
+let change = document.getElementById('change');
+
+let cont =document.getElementById('cont');
 
 //position
-let lw = document.getElementById('player-lw');
-let st = document.getElementById('player-st');
-let rw = document.getElementById('player-rw');
-let cm_g = document.getElementById('player-cm-g');
-let cm_c = document.getElementById('player-cm-c');
-let cm_d = document.getElementById('player-cm-d');
-let lb = document.getElementById('player-lb');
-let cb_g = document.getElementById('player-cb-g');
-let cb_d = document.getElementById('player-cb-d');
-let rb = document.getElementById('player-rb');
-let gk = document.getElementById('player-gk');
+let lw = document.getElementById('LW');
+let st = document.getElementById('ST');
+let rw = document.getElementById('RW');
+let cm_g = document.getElementById('CM-G');
+let cm_c = document.getElementById('CM-C');
+let cm_d = document.getElementById('CM-D');
+let lb = document.getElementById('LB');
+let cb_g = document.getElementById('CB-G');
+let cb_d = document.getElementById('CB-D');
+let rb = document.getElementById('RB');
+let gk = document.getElementById('GK');
 
 
-//les changement
-
-let chang1= document.getElementById('chang1');
-let chang2= document.getElementById('chang2');
-let chang3= document.getElementById('chang3');
-let chang4= document.getElementById('chang4');
-let chang5= document.getElementById('chang5');
-let chang6= document.getElementById('chang6');
-let chang7= document.getElementById('chang7');
-let chang8= document.getElementById('chang8');
 
 addPlayerForm.addEventListener("submit", function(event) {
     event.preventDefault();
-        addPlayer();
-    
+        
+    affichage()
 });
 
 
@@ -90,14 +73,8 @@ function clearData() {
     dribbling.value = '';
     defending.value = '';
     physical.value = '';
+    change.value = '';
 }
-
-
-
-
-
-
-
 function addPlayer() {
     const player = {
         name: name.value,
@@ -111,20 +88,22 @@ function addPlayer() {
         passing: passing.value,
         dribbling: dribbling.value,
         defending: defending.value,
-        physical: physical.value
+        physical: physical.value,
+        change:change.value,
     };
 
     players.push(player);
     localStorage.setItem('player', JSON.stringify(players));
 
     clearData();
-    displayPlayers();
+   affichage();
 }
 
 
 
 
 function update() {
+    console.log("up")
     if (pos.value === "GK") {
       pace.setAttribute("placeholder", "dividing" );
       dribbling.setAttribute("placeholder", "handling" );
@@ -141,10 +120,6 @@ function update() {
       physical.setAttribute("placeholder", "physical");
     }
   }
-  update();
-
-
-
 
 
 
@@ -177,8 +152,11 @@ function getPlayerContainer(position) {
     }
 }
 
-function displayPlayers() {
-    const playersList = document.getElementById('players-list');
+
+
+
+function affichage() {
+    const playersList= document.getElementById('players-list');
     playersList.innerHTML = '';
 
     players.forEach((player, index) => {
@@ -189,6 +167,7 @@ function displayPlayers() {
                 <div class="player-master-info">
                     <div class="player-rating"><span>${player.rating}</span></div>
                     <div class="player-position"><span>${player.position}</span></div>
+                    <div class="player-change"><span>${player.change}</span></div>
                     <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
                     <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
                 </div>
@@ -230,73 +209,81 @@ function displayPlayers() {
                         </div>
                     </div>
                 </div>
-                <button  onclick="editPlayer(${index})" style="color: blue;"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button onclick="deletePlayer(this,${index})" style="color: red;"><i class="fa-solid fa-trash"></i></button>
-                <button onclick="btn1()" style="color: green;"><i class="fa-solid fa-reply"></i></button>
+                <button  onclick="modificatio(${index})" style="color: blue;"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button onclick="supprime(this,${index})" style="color: red;"><i class="fa-solid fa-trash"></i></button>
 
 
             </div>
         `;
-        switch (player.position) {
-            case 'LW':
-                lw.innerHTML = playerCard.innerHTML;
-                break;
-            case 'ST':
-                st.innerHTML = playerCard.innerHTML;
+ if(change.value === "terain"){
+    console.log(change.value)
+    switch (player.position) {
+        case 'LW':
+           
+                  lw.innerHTML= playerCard.innerHTML;
+              
+              break;
+        case 'ST':
+            st.innerHTML= playerCard.innerHTML;
 
-                break;
-            case 'RW':
-                rw.innerHTML = playerCard.innerHTML;
+            break;
+        case 'RW':
+            rw.innerHTML = playerCard.innerHTML;
+            break;
+        case 'CM-G':
+            cm_g.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'CM-G':
-                cm_g.innerHTML = playerCard.innerHTML;
+            break;
+        case 'CM':
+            cm_c.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'CM':
-                cm_c.innerHTML = playerCard.innerHTML;
+            break;
+        case 'CM-D':
+            cm_d.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'CM-D':
-                cm_d.innerHTML = playerCard.innerHTML;
+            break;
+        case 'LB':
+            lb.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'LB':
-                lb.innerHTML = playerCard.innerHTML;
+            break;
+        case 'CB-G':
+            cb_g.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'CB-G':
-                cb_g.innerHTML = playerCard.innerHTML;
+            break;
+        case 'CB':
+            cb_d.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'CB':
-                cb_d.innerHTML = playerCard.innerHTML;
+            break;
+        case 'RB':
+            rb.innerHTML = playerCard.innerHTML;
 
-                break;
-            case 'RB':
-                rb.innerHTML = playerCard.innerHTML;
+            break;
+        case 'GK':
+            gk.innerHTML = playerCard.innerHTML;
+            break;
+        default:
+            playersList.appendChild(playerCard);
+            break;
+    }
 
-                break;
-            case 'GK':
-                gk.innerHTML = playerCard.innerHTML;
-                break;
-            default:
-                playersList.appendChild(playerCard);
-                break;
-        }
+ }else if(change.value === "change"){
+    cont.appendChild(playerCard)
+ }
     });
 }
 
-displayPlayers();
+affichage();
 
 
-function editPlayer(index){
+
+
+
+
+
+function modificatio(index){
     modal.classList.remove("hidden")
     modal.style.display='block';
     const player = players[index];
-    
-    console.log("done")
-
     name.value = player.name;
     pos.value = player.position;
     rating.value = player.rating;
@@ -319,17 +306,15 @@ function save(){
 
 }
 
-displayPlayers() 
+affichage() 
 
-function deletePlayer(element,index) { 
+function supprime(element,index) { 
 
     players.splice(index, 1);
     localStorage.setItem('player', JSON.stringify(players));
     element.parentElement.parentElement.innerHTML = "";
-    displayPlayers();
+   hhh();
 }
-
-
 
 function validateForm() {
     let name = document.getElementById('name').value;
@@ -352,35 +337,38 @@ function validateForm() {
     const numberRegex = /^[0-9]{1,2}$/;
   
     document.querySelectorAll('.text-red-500').forEach(span => span.textContent = '');
-  
     let isValid = true; 
-  
     if (!nameRegex.test(name)) {
-   alert( "Le nom doit comporter entre 2 et 50 lettres uniquement.");
+      document.getElementById('alert-name').innerHTML = "Le nom doit comporter entre 2 et 50 lettres uniquement.";
+      document.getElementById('alert-name').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
     }
     if (!posRegex.test(pos)) {
-       alert("Veuillez sélectionner une position valide.");
+        document.getElementById('alert-pos').innerHTML = "Veuillez sélectionner une position valide.";
+        document.getElementById('alert-pos').className="text-sm text-red-600 font-light"
           isValid = false;
       return;
     }
     if (!ratingRegex.test(rating)) {
-        alert("La note doit être un nombre entre 0 et 100.");
+         document.getElementById('alert-rating').innerHTML = "La note doit être un nombre entre 0 et 100.";
+        document.getElementById('alert-rating').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
-
     }
   
     if (!urlRegex.test(nationality)) {
-        alert("La nationalité doit être une URL valide.");
+        document.getElementById('alert-nationality').innerHTML = "La nationalité doit être une URL valide.";
+        document.getElementById('alert-nationality').className="text-sm text-red-600 font-light"
+        
       isValid = false;
       return;
 
     }
   
     if (!urlRegex.test(club)) {
-        alert( "Le club doit être une URL valide.");
+          document.getElementById('alert-club').innerHTML = "La club doit être une URL valide.";
+        document.getElementById('alert-club').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
 
@@ -388,6 +376,9 @@ function validateForm() {
   
     if (!urlRegex.test(photo)) {
         alert( "La photo doit être une URL valide.");
+         document.getElementById('alert-photo').innerHTML = "La photo doit être une URL valide.";
+        document.getElementById('alert-photo').className="text-sm text-red-600 font-light"
+        
       isValid = false;
       return;
 
@@ -395,13 +386,16 @@ function validateForm() {
   
     if (!numberRegex.test(pace)) {
         alert("La vitesse doit être un nombre compris entre 0 et 999.");
+         document.getElementById('alert-pace').innerHTML = "La vitesse doit être un nombre compris entre 1 et 100.";
+        document.getElementById('alert-pace').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
 
     }
   
     if (!numberRegex.test(shooting)) {
-        alert(        "Le tir doit être un nombre compris entre 0 et 100.");
+        document.getElementById('alert-shooting').innerHTML = "Le tri doit être un nombre compris entre 1 et 100.";
+        document.getElementById('alert-shooting').className="text-sm text-red-600 font-light"    
       isValid = false;
 
       return;
@@ -409,32 +403,31 @@ function validateForm() {
     }
   
     if (!numberRegex.test(passing)) {
-        alert("Les passes doivent être un nombre compris entre 0 et 100.");
+        document.getElementById('alert-passing').innerHTML = "Les passes doivent être un nombre compris entre 1 et 100.";
+        document.getElementById('alert-passing').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
-
     }
-  
     if (!numberRegex.test(dribbling)) {
-        alert("Les dribbles doivent être un nombre compris entre 0 et 100.");
+        document.getElementById('alert-dribbling').innerHTML ="Les dribbles doivent être un nombre compris entre 1 et 100.";
+        document.getElementById('alert-dribbling').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
-
     }
-  
     if (!numberRegex.test(defending)) {
-        alert( "La défense doit être un nombre compris entre 0 et 100.");
+         document.getElementById('alert-defending').innerHTML ="La défense doit être un nombre compris entre 1 et 100.";
+        document.getElementById('alert-defending').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
 
     }
-  
     if (!numberRegex.test(physical)) {
-        alert("Le physique doit être un nombre compris entre 0 et 100.")
+        document.getElementById('alert-physical').innerHTML ="Le physique doit être un nombre compris entre 1 et 100.";
+        document.getElementById('alert-physical').className="text-sm text-red-600 font-light"
       isValid = false;
       return;
     }
-  
+    addPlayer();
     return isValid; 
   }
   document.getElementById('add-form').addEventListener('submit', function (e) {

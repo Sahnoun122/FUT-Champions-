@@ -10,6 +10,13 @@ body {
     min-height: 700px; */
     background: url("../image/fond-terrain-football-degrade_23-2149001453.jpg") no-repeat center center/cover;
 }
+#h1{
+    color: azure;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 700;
+}
 
 .fulll{
     display: flex;
