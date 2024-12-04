@@ -17,6 +17,9 @@ body {
     font-size: 30px;
     font-weight: 700;
 }
+#cont{
+    margin-bottom: 200px;
+}
 
 .fulll{
     display: flex;

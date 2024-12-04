@@ -59,7 +59,6 @@ addPlayerForm.addEventListener("submit", function(event) {
     affichage()
 });
 
-
 function clearData() {
     name.value = '';
     pos.value = 'Choose a position';
@@ -91,16 +90,12 @@ function addPlayer() {
         physical: physical.value,
         change:change.value,
     };
-
     players.push(player);
     localStorage.setItem('player', JSON.stringify(players));
 
     clearData();
-   affichage();
+
 }
-
-
-
 
 function update() {
     console.log("up")
@@ -158,7 +153,6 @@ function getPlayerContainer(position) {
 function affichage() {
     const playersList= document.getElementById('players-list');
     playersList.innerHTML = '';
-
     players.forEach((player, index) => {
         const playerCard = document.createElement('div');
         playerCard.classList.add('fut-player-card');
@@ -215,13 +209,12 @@ function affichage() {
 
             </div>
         `;
- if(change.value === "terain"){
-    console.log(change.value)
+        console.log(player.change)
+ if(player.change === "terain"){
+   
     switch (player.position) {
         case 'LW':
-           
-                  lw.innerHTML= playerCard.innerHTML;
-              
+            lw.innerHTML= playerCard.innerHTML;
               break;
         case 'ST':
             st.innerHTML= playerCard.innerHTML;
@@ -266,19 +259,13 @@ function affichage() {
             break;
     }
 
- }else if(change.value === "change"){
+ }else if(player.change === "change"){
     cont.appendChild(playerCard)
  }
     });
 }
 
 affichage();
-
-
-
-
-
-
 
 function modificatio(index){
     modal.classList.remove("hidden")
@@ -306,14 +293,14 @@ function save(){
 
 }
 
-affichage() 
+// affichage() 
 
 function supprime(element,index) { 
 
     players.splice(index, 1);
     localStorage.setItem('player', JSON.stringify(players));
     element.parentElement.parentElement.innerHTML = "";
-   hhh();
+    affichage();
 }
 
 function validateForm() {
@@ -428,10 +415,76 @@ function validateForm() {
       return;
     }
     addPlayer();
+    affichage();
     return isValid; 
   }
+
   document.getElementById('add-form').addEventListener('submit', function (e) {
     if (!validateForm()) {
       e.preventDefault(); 
+      affichage();
     }
   });
+
+
+//   players.forEach((player, index) => {
+//     const playerCard = document.createElement('div');
+//     playerCard.classList.add('fut-player-card');
+//     playerCard.innerHTML = `
+//         <div class="player-card-top">
+//             <div class="player-master-info">
+//                 <div class="player-rating"><span>${player.rating}</span></div>
+//                 <div class="player-position"><span>${player.position}</span></div>
+//                 <div class="player-change"><span>${player.change}</span></div>
+//                 <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
+//                 <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
+//             </div>
+//             <div class="player-picture"><img src="${player.photo}" alt="${player.name}" draggable="false"/>
+//                 <div class="player-extra"><span>${player.position}</span></div>
+//             </div>
+//         </div>
+//         <div class="player-card-bottom">
+//             <div class="player-info">
+//                 <div class="player-name"><span>${player.name}</span></div>
+//                 <div class="player-features">
+//                     <div class="player-features-col">
+//                         <span>
+//                             <div class="player-feature-value">${player.pace}</div>
+//                             <div class="player-feature-title">PAC</div>
+//                         </span>
+//                         <span>
+//                             <div class="player-feature-value">${player.shooting}</div>
+//                             <div class="player-feature-title">SHO</div>
+//                         </span>
+//                         <span>
+//                             <div class="player-feature-value">${player.passing}</div>
+//                             <div class="player-feature-title">PAS</div>
+//                         </span>
+//                     </div>
+//                     <div class="player-features-col">
+//                         <span>
+//                             <div class="player-feature-value">${player.dribbling}</div>
+//                             <div class="player-feature-title">DRI</div>
+//                         </span>
+//                         <span>
+//                             <div class="player-feature-value">${player.defending}</div>
+//                             <div class="player-feature-title">DEF</div>
+//                         </span>
+//                         <span>
+//                             <div class="player-feature-value">${player.physical}</div>
+//                             <div class="player-feature-title">PHY</div>
+//                         </span>
+//                     </div>
+//                 </div>
+//             </div>
+//             <button  onclick="modificatio(${index})" style="color: blue;"><i class="fa-solid fa-pen-to-square"></i></button>
+//             <button onclick="supprime(this,${index})" style="color: red;"><i class="fa-solid fa-trash"></i></button>
+
+
+//         </div>
+//     `;
+
+// cont.appendChild(playerCard)
+
+// });
+affichage()
