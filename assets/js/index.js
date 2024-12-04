@@ -31,7 +31,6 @@ let physical = document.getElementById('physical');
 //localstorage
 let players = JSON.parse(localStorage.getItem('player')) || [];
 
-// let player = JSON.parse(localStorage.getItem('player')) || [];
 
 //change
 let change = document.getElementById('change');
@@ -56,7 +55,7 @@ let gk = document.getElementById('GK');
 addPlayerForm.addEventListener("submit", function(event) {
     event.preventDefault();
         
-    affichage()
+    // affichage()
 });
 
 function clearData() {
@@ -98,7 +97,6 @@ function addPlayer() {
 }
 
 function update() {
-    console.log("up")
     if (pos.value === "GK") {
       pace.setAttribute("placeholder", "dividing" );
       dribbling.setAttribute("placeholder", "handling" );
@@ -161,6 +159,7 @@ function affichage() {
                 <div class="player-master-info">
                     <div class="player-rating"><span>${player.rating}</span></div>
                     <div class="player-position"><span>${player.position}</span></div>
+                    <div class="player-change"><span>${player.change}</span></div>
                     <div class="player-nation"><img src="${player.nationality}" alt="Nationalité" draggable="false"/></div>
                     <div class="player-club"><img src="${player.club}" alt="Club" draggable="false"/></div>
                 </div>
