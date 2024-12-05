@@ -55,7 +55,7 @@ let gk = document.getElementById('GK');
 addPlayerForm.addEventListener("submit", function(event) {
     event.preventDefault();
         
-    // affichage()
+    affichage()
 });
 
 function clearData() {
@@ -89,6 +89,9 @@ function addPlayer() {
         physical: physical.value,
         change:change.value,
     };
+
+  
+
     players.push(player);
     localStorage.setItem('player', JSON.stringify(players));
 
@@ -321,7 +324,8 @@ function validateForm() {
     const urlRegex = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
     const numberRegex = /^[0-9]{1,2}$/;
   
-    document.querySelectorAll('.text-red-500').forEach(span => span.textContent = '');
+    // document.querySelectorAll('.text-red-500').forEach(span => span.textContent = '');
+    
     let isValid = true; 
     if (!nameRegex.test(name)) {
       document.getElementById('alert-name').innerHTML = "Le nom doit comporter entre 2 et 50 lettres uniquement.";
